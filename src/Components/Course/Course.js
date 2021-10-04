@@ -12,7 +12,7 @@ const Course = (props) => {
                <Card className='h-100'>
                     <Card.Img variant="top" src={imgURL} />
                     <Card.Body>
-                         <Card.Title>{courseName}</Card.Title>
+                    <Link className="course-name" to={`/courses/${id}`}><Card.Title>{courseName}</Card.Title></Link>
                          <p className="text-muted">by {courseOwner}</p>
                     </Card.Body>
                     <Card.Footer className="d-flex justify-content-between align-items-center">
@@ -27,7 +27,7 @@ const Course = (props) => {
                          />
                          </p>
                     </Card.Footer>
-                    <Link to={`/courses/${id}`}>Details</Link>
+                    
                </Card>
           </div>
      );

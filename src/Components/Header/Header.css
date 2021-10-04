@@ -20,4 +20,11 @@ nav {
  .sign-in {
      border: 1px solid white;
      padding: 7px 20px;
+     transition: .3s;
  }
+ .sign-in:hover {
+     border: 1px solid #39ad31;
+ }
+ .menu a:hover {
+    color: #39ad31 !important;
+}
