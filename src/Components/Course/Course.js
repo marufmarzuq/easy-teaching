@@ -2,9 +2,11 @@ import React from 'react';
 import './Course.css'
 import { Card } from 'react-bootstrap';
 import Rating from 'react-rating';
+import { Link } from 'react-router-dom';
 
 const Course = (props) => {
-     const { courseName, rate, imgURL, courseOwner, level, price } = props.course;
+     const { courseName, rate, imgURL, courseOwner, level, price, id } = props.course;
+
      return (
           <div className="col">
                <Card className='h-100'>
@@ -25,6 +27,7 @@ const Course = (props) => {
                          />
                          </p>
                     </Card.Footer>
+                    <Link to={`/courses/${id}`}>Details</Link>
                </Card>
           </div>
      );

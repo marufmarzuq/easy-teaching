@@ -9,7 +9,7 @@ const Courses = (props) => {
           <div className='container-xxl courses'>
                <div className="courses-header">
                     <h2>Thousands of courses authored by <br />
-                    our network of industry experts</h2>
+                    our network of <span className="heading-span">industry experts</span></h2>
                </div>
                <div className="row row-cols-1 row-cols-md-4 g-4">
                {
