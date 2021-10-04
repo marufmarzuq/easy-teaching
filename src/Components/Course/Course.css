@@ -1,3 +1,10 @@
 .card{
-     background-color: #222;
+     background-color: #222!important;
 }
+.fa-star {
+     color: #f7a614;
+}
+.course-rate {
+     font-size: 25px;
+     width: 60px;
+ }

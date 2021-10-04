@@ -1,26 +1,32 @@
 import React from 'react';
 import './Course.css'
 import { Card } from 'react-bootstrap';
+import Rating from 'react-rating';
 
 const Course = (props) => {
      const { courseName, rate, imgURL, courseOwner, level, price } = props.course;
      return (
-          <Card style={{ width: '19rem' }}>
-               <Card.Img variant="top" src={imgURL} />
-               <Card.Body>
-                    <Card.Title>{courseName}</Card.Title>
-                    <h3>by {courseOwner}</h3>
-                    <Card.Text>
-                         Some quick example text to build on the card title and make up the bulk of
-                         the card's content.
-                    </Card.Text>
-                    <Card.Footer>
-                         <h2 className="courseRate">${price}</h2>
+          <div className="col">
+               <Card className='h-100'>
+                    <Card.Img variant="top" src={imgURL} />
+                    <Card.Body>
+                         <Card.Title>{courseName}</Card.Title>
+                         <p className="text-muted">by {courseOwner}</p>
+                    </Card.Body>
+                    <Card.Footer className="d-flex justify-content-between align-items-center">
+                         <p className="course-rate">${price}</p>
                          <p>{level}</p>
-                         <p>{ rate}</p>
+                         <p>
+                         <Rating
+                              initialRating={rate}
+                              emptySymbol="far fa-star"
+                              fullSymbol="fas fa-star"
+                              readonly
+                         />
+                         </p>
                     </Card.Footer>
-               </Card.Body>
-          </Card>
+               </Card>
+          </div>
      );
 };
 
