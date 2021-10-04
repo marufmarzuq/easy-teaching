@@ -12,6 +12,7 @@ const Header = () => {
                               <img src={img} alt="" />
                          </Link>
                          <div className="menu">
+                              <Link to="/">Home</Link>
                               <Link to="/courses">All Courses</Link>
                               <Link to="/about">About</Link>
                               <Link className="sign-in" to="/sign-in">Sign In</Link>
