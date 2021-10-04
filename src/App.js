@@ -1,4 +1,6 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { useState } from 'react';
+import { useEffect } from 'react';
 import './App.css';
 import Home from './Components/Home/Home';
 import AllCourses from './Components/AllCourses/AllCourses';
@@ -7,7 +9,15 @@ import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import NotFound from './Components/NotFound/NotFound';
 
+
 function App() {
+  const [courses, setCourses] = useState([]);
+  useEffect(() => {
+       fetch('./fakeData.JSON')
+            .then(res => res.json())
+            .then(data => setCourses(data))
+  }, [])
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -15,13 +25,13 @@ function App() {
         <Header></Header>
         <Switch>
           <Route exact path="/">
-            <Home></Home>
+            <Home courses={courses}></Home>
           </Route>
           <Route path="/home">
-            <Home></Home>
+            <Home courses={courses}></Home>
           </Route>
           <Route path="/courses">
-          <AllCourses></AllCourses>
+          <AllCourses courses={courses}></AllCourses>
           </Route>
           <Route path="/about">
             <About></About>

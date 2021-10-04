@@ -1,14 +1,6 @@
-import React, { useEffect, useState } from 'react';
 import Courses from '../Courses/Courses';
 
-const Home = () => {
-     const [courses, setCourses] = useState([]);
-     useEffect(() => {
-          fetch('./fakeData.JSON')
-               .then(res => res.json())
-               .then(data => setCourses(data))
-     }, [])
-
+const Home = ({courses}) => {
      return (
           <>
                <Courses courses={courses}></Courses>

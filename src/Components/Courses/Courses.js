@@ -4,7 +4,7 @@ import Course from '../Course/Course';
 import { Link } from 'react-router-dom';
 
 const Courses = (props) => {
-     const courses = props.courses;
+     const courses = props.courses.slice(0,4);
      return (
           <div className='container-xxl courses'>
                <div className="courses-header">
