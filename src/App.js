@@ -44,9 +44,6 @@ function App() {
           <Route exact path="/courses/:id">
             <CourseDetails courses={courses}></CourseDetails>
           </Route>
-          <Route exact path="/courses/:*">
-          <NotFound></NotFound>
-          </Route>
           <Route path="*">
             <NotFound></NotFound>
           </Route>

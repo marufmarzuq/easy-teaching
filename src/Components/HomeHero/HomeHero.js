@@ -12,7 +12,7 @@ const HomeHero = () => {
                                    <h1>Build Skills with Online Courses from expert instructor</h1>
                                    <p className='lead'>Start streaming on-demand video lectures today from top level instructors Attention heatmaps.</p>
                                    <div className="hero-search-field">
-                                        <input type="search" />
+                                        <input type="search" placeholder="What do you want to learn?" />
                                         <button>Search</button>
                                    </div>
                               </div>
