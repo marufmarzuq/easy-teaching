@@ -29,20 +29,23 @@ function App() {
           <Route exact path="/">
             <Home courses={courses}></Home>
           </Route>
-          <Route path="/home">
+          <Route exact path="/home">
             <Home courses={courses}></Home>
           </Route>
           <Route exact path="/courses">
           <AllCourses courses={courses}></AllCourses>
           </Route>
-          <Route path="/about">
+          <Route exact path="/about">
             <About></About>
           </Route>
-          <Route path="/sign-in">
+          <Route exact path="/sign-in">
             <SignIn></SignIn>
           </Route>
           <Route exact path="/courses/:id">
             <CourseDetails courses={courses}></CourseDetails>
+          </Route>
+          <Route exact path="/courses/:*">
+          <NotFound></NotFound>
           </Route>
           <Route path="*">
             <NotFound></NotFound>
